@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+    <div class="row justify-content-around mt-5">
+        <a href="/login" class="col-3 btn btn-primary"> Login</a>
+        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+    </div>
+</main>
+   
+<!-- show all bikes in the db -->
+<h1>Bikes</h1>
+    <ul>
+    <% bike.forEach( el => { %>
+            <li class='bikeItem' data-id='<%=el._id%>'></li>
+    <% }) %>    
+    </ul>
+
+<%- include('partials/footer') -%>
